@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 100);
             $table->text('body');
-            $table->integer('user_id');
+            $table->foreignId('post_id')->constrained('posts');
             $table->integer('files');
             $table->integer('view_count');
             $table->timestamps();
@@ -32,6 +32,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('posts', function (Blueprint $table) {
+            //
+            $table->dropForeign('users_user_id_foreign');
+            $table->dropColumn('user_id');
+        });
     }
 };
