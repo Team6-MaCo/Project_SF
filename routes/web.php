@@ -42,4 +42,14 @@ Route::get('/dashboard', function () {
 //     Route::get('/userpage', 'index')->name('userpage');
 // });
 
+// ==================================================
+// Route::get('/calendar', function () {
+//     return Inertia::render('/scenes/calendar/calendar.jsx');
+// })->middleware(['auth', 'verified'])->name('calendar');
+Route::get('/calendar', function () {
+    return Inertia::render('scenes/calendar/calendar');
+})->name('calendar');
+
+
+// ==================================================
 require __DIR__.'/auth.php';
