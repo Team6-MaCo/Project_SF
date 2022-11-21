@@ -1,4 +1,4 @@
-import Header from "../../components/Header";
+import Header from "../../../Components/Header";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { ColorModeContext, tokens } from "../../../theme";
 import { useContext } from "react";

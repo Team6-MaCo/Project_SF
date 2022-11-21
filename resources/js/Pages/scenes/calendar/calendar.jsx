@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "@fullcalendar/react/dist/vdom";
 import FullCalendar, { formatDate } from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -12,7 +13,7 @@ import {
     Typography,
     useTheme,
 } from "@mui/material";
-import Header from "../../../components/Header";
+import Header from "../../../Components/Header";
 import { tokens } from "../../../theme";
 
 const Calendar = () => {
